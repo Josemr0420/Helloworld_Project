@@ -1,115 +1,119 @@
-{% load static %}
+{% load static %} 
 
-<html lang="en">
+<!doctype html> 
 
-<head>
+<html lang="en"> 
 
-    <meta charset="utf-8"/>
+<head> 
 
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta charset="utf-8" /> 
 
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-          rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
 
-    <link href="{% static 'pages/app.css' %}" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" /> 
 
-    <title>{% block title %}'Online Store'{% endblock %}</title>
+  <link href="{% static 'pages/app.css' %}" rel="stylesheet" /> 
 
-</head>
+  <title>{% block title %}'Online Store'{% endblock %}</title> 
 
-<body>
+</head> 
 
-<!-- header -->
+<body> 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-4">
+  <!-- header --> 
 
-    <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary py-4"> 
 
-        <a class="navbar-brand" href="{% url 'home' %}">Online Store</a>
+    <div class="container"> 
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      <a class="navbar-brand" href="{% url 'home' %}">Online Store</a> 
 
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" 
 
-            <span class="navbar-toggler-icon"></span>
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"> 
 
-        </button>
+        <span class="navbar-toggler-icon"></span> 
 
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      </button> 
 
-            <div class="navbar-nav ms-auto">
-                <a class="nav-link active" href="{% url 'home' %}">Home</a>
-                <a class="nav-link active" href="{% url 'index' %}">Products</a>
-                <a class="nav-link active" href="{% url 'about' %}">About</a>
-                <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
-                <a class="nav-link active" href="{% url 'form' %}">Create</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> 
 
+        <div class="navbar-nav ms-auto"> 
 
-            </div>
+          <a class="nav-link active" href="{% url 'home' %}">Home</a> 
 
-        </div>
+          <a class="nav-link active" href="{% url 'about' %}">About</a> 
 
-    </div>
+          <a class="nav-link active" href="{% url 'contact' %}">Contact us</a>
 
-</nav>
+          <a class="nav-link active" href="{% url 'index' %}">Products</a>
 
+          <a class="nav-link active" href="{% url 'form' %}">Create</a>
 
-<header class="masthead bg-primary text-white text-center py-4">
+          <a class="nav-link active" href="{% url 'cart_index' %}">Cart</a>
 
-    <div class="container d-flex align-items-center flex-column">
+        </div> 
 
-        <h2>{% block header_title %}'A Laravel EAFIT App'{% endblock %}</h2>
+      </div> 
 
-    </div>
+    </div> 
 
-</header>
+  </nav> 
 
-<!-- header -->
+  <header class="masthead bg-primary text-white text-center py-4"> 
 
+    <div class="container d-flex align-items-center flex-column"> 
 
-<div class="container my-4">
+      <h2>{% block header_title %}'A Laravel EAFIT App'{% endblock %}</h2> 
 
-    {% block content %}
+    </div> 
 
-    {% endblock %}
+  </header> 
 
-</div>
+  <!-- header --> 
 
+  <div class="container my-4"> 
 
-<!-- footer -->
+    {% block content %} 
 
-{% block footer %}
+    {% endblock %} 
 
-<div class="copyright py-4 text-center text-white">
+  </div> 
 
-    <div class="container">
+<!-- footer --> 
 
-        <small>
+  {% block footer %} 
 
-            Copyright - <a class="text-reset fw-bold text-decoration-none" href="https://twitter.com/danielgarax"
+  <div class="copyright py-4 text-center text-white"> 
 
-                           target="_blank">
+    <div class="container"> 
 
-            Daniel Correa
+      <small> 
 
-        </a>
+        Copyright - <a class="text-reset fw-bold text-decoration-none" target="_blank" 
 
-        </small>
+          href="https://twitter.com/danielgarax"> 
 
-    </div>
+          Daniel Correa 
 
-</div>
+        </a> 
 
-<!-- footer -->
+      </small> 
 
-{% endblock %}
+    </div> 
 
+  </div> 
 
-<script crossorigin="anonymous"
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+  <!-- footer --> 
 
-</script>
+  {% endblock %} 
 
-</body>
+ 
 
-</html> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"> 
+
+  </script> 
+
+</body> 
+
+</html>

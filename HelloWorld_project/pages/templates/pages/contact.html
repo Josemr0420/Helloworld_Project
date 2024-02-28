@@ -1,21 +1,15 @@
-{% extends 'pages/base.html' %} 
+{% extends 'pages/base.html' %}
 
-{%  block title %}'Home Page - Online Store'{% endblock %} 
+{%  block title %}Contact us{% endblock %}
 
-{% block content %} 
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-</head>
-<body>
-    <h1>Contact Us</h1>
-    <p>Email: {{ contact_info.email }}</p>
-    <p>Address: {{ contact_info.address }}</p>
-    <p>Phone: {{ contact_info.phone }}</p>
-</body>
+<html>
+    <body>
+        <p>Email: {{ email }}</p>
+        <p>Address: {{ address }}</p>
+        <p>Phone: {{ phone }}</p>
+    </body>
 </html>
-{% endblock %} 
+
+{% endblock %}
